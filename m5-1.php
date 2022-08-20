@@ -115,7 +115,7 @@ if(!empty($_POST["name"])&&!empty($_POST["str"])&&$_POST["pass"]=="password"&&!e
                $stmt = $pdo->prepare($sql);
                $stmt->bindParam(':name', $name, PDO::PARAM_STR);
                $stmt->bindParam(':comment', $comment, PDO::PARAM_STR);
-               $stmt->bindParam(':pass', $comment, PDO::PARAM_STR);
+               $stmt->bindParam(':pass', $pass, PDO::PARAM_STR);
                $stmt->bindParam(':date', $date, PDO::PARAM_STR);
                $stmt->bindParam(':id', $id, PDO::PARAM_INT);
                $stmt->execute();
